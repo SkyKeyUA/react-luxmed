@@ -1,0 +1,42 @@
+.CompletedPage {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-inline: var(--main-desktop-padding);
+}
+
+@media screen and (min-width: 1500px) {
+  .CompletedPage {
+    padding-inline: var(--main-desktop-padding);
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .CompletedPage {
+    padding-inline: var(--main-tablet-padding);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .CompletedPage {
+    padding-inline: var(--main-mobile-padding);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .CompletedPage h2,
+  .CompletedPage p {
+    font-size: medium;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .CompletedPage {
+    padding-inline: var(--main-mini-mobile-padding);
+  }
+
+  .CompletedPage h2,
+  .CompletedPage p {
+    font-size: small;
+  }
+}

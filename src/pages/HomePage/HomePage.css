@@ -1,0 +1,215 @@
+p,
+h1,
+h2,
+h3,
+a,
+input,
+textarea {
+  font-family: Satoshi;
+}
+
+.Section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-inline: var(--main-desktop-padding);
+}
+
+.Offer {
+  margin-inline: 15px;
+}
+
+.Slogan {
+  font-family: Satoshi;
+  font-weight: 700;
+}
+
+.HomePage h1 span {
+  background: linear-gradient(to right, #20655a, #34a794);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.HomePage p span {
+  color: #20655a;
+  font-weight: 700;
+}
+
+.HomePage .Video {
+  display: flex;
+  justify-content: center;
+  margin-block: 20px;
+  height: 605px;
+}
+
+.HomePage .Video .VideoPlayer {
+  border: 10px solid #ffffff;
+  box-shadow: 0px 14px 30px 0px #0000001a, 0px 54px 54px 0px #00000017,
+    0px 122px 73px 0px #0000000d, 0px 217px 87px 0px #00000003,
+    0px 339px 95px 0px #00000000;
+
+  max-width: 1900px;
+  width: 100%;
+  height: 100%;
+}
+
+.Promotion .Description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  margin-inline: 5vw;
+  width: 25vw;
+}
+
+.Promotion .Phone {
+  width: 30rem;
+}
+
+.Promotion .Description .Label {
+  color: #ffb800;
+  background-color: #fdf7e5;
+  background-image: url('../../../public/img/label.svg');
+  width: 438px;
+  height: 50px;
+  padding-inline: 20px;
+  align-content: center;
+
+  /* &::after {
+    content: url('../../../public/img/label-corner.svg'); 
+  } */
+}
+
+.Promotion .Description .AccentColor {
+  color: #20655a;
+  font-weight: 700;
+  margin: 10px 0 0 0;
+}
+
+.Promotion .Description .Button {
+  margin-top: 15px;
+}
+
+.Review .ReviewsMap {
+  margin-block: 20px;
+  width: 100%;
+}
+
+.Pros .Description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  width: 540px;
+}
+
+.Pros .Women {
+  width: 40%;
+}
+
+.Pros .Description .ProsList {
+  font-weight: 300;
+  margin: 0 0 20px 0;
+  padding: 0 0 0 20px;
+}
+
+.HomePage .Feedback {
+  margin-inline: 0;
+  margin-top: 50px;
+  height: 470px;
+  background-image: url('../../../public/img/feedback-back.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: justify;
+  align-items: baseline;
+}
+
+.Feedback h1 {
+  color: #ffffff;
+  align-self: center;
+}
+
+.Feedback .FeedbackForm {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.Feedback .FeedbackForm input,
+.Feedback .FeedbackForm textarea {
+  font-weight: 500;
+  color: white;
+  border: 1px solid #fff;
+  background-color: transparent;
+}
+
+.Feedback .FeedbackForm input::placeholder,
+.Feedback .FeedbackForm textarea::placeholder {
+  color: white;
+}
+
+.Feedback .FeedbackForm input {
+  height: 32px;
+  padding-inline: 15px;
+  margin-bottom: 16px;
+}
+
+.Feedback .FeedbackForm #message {
+  resize: none;
+  height: 132px;
+  margin-bottom: 16px;
+  padding: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+  .Feedback h1 {
+    font-size: larger;
+  }
+
+  .Promotion .Phone {
+    display: none;
+  }
+
+  .Promotion {
+    justify-content: center;
+  }
+
+  .Promotion .Description {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .Feedback h1 {
+    font-size: medium;
+  }
+
+  .Pros .Women {
+    display: none;
+  }
+
+  .Pros {
+    justify-content: center;
+  }
+
+  .Pros .Description {
+    align-items: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .Feedback {
+    flex-direction: column;
+    padding-block: 2rem;
+  }
+
+  .Feedback h1 {
+    text-align: center;
+  }
+}

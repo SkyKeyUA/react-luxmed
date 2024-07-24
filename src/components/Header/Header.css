@@ -1,0 +1,47 @@
+.Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: var(--main-desktop-padding);
+  height: 80px;
+}
+
+.Logo {
+  height: 70px;
+  margin-right: 15px;
+}
+
+.Buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+@media screen and (min-width: 1500px) {
+  .Header {
+    padding-inline: var(--main-desktop-padding) !important;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .Header {
+    padding-inline: var(--main-tablet-padding) !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Header {
+    padding-inline: var(--main-mobile-padding) !important;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .Header {
+    padding-inline: var(--main-mini-mobile-padding) !important;
+  }
+
+  .Logo {
+    height: 50px;
+  }
+}

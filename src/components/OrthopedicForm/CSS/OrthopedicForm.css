@@ -1,0 +1,210 @@
+.Content {
+  margin: 20px;
+}
+
+.Content form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 60px;
+}
+
+.Content .ContentColumn {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.Content .ContentColumn .TextField {
+  width: 100%;
+  height: 42px;
+  padding-inline: 15px;
+  background-color: #fafafa;
+  border: 1px solid var(--rich-grey-color);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 14px;
+  box-sizing: border-box;
+
+  &:focus {
+    outline-color: #20655a;
+  }
+}
+
+.Content .ContentColumn .Label {
+  margin: 0;
+}
+
+.Content .ContentColumn #medicalBraces,
+.Content .ContentColumn #otherProducts {
+  min-height: 100px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding: 15px;
+}
+
+/*
+* RadioButtons Styling
+*/
+
+.Content .ContentColumn .RadioGroup {
+  display: flex;
+  flex-direction: row;
+}
+.Content .ContentColumn .RadioGroup .RadioLabel {
+  gap: 10px;
+}
+
+.Content .ContentColumn .RadioGroup .RadioField {
+  width: 1rem;
+  background-color: #fafafa;
+  border: 1px solid var(--rich-grey-color);
+  accent-color: #20655a;
+}
+
+.Content .ContentColumn .RadioGroup .RadioLabel {
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+}
+
+.Content .ContentColumn .QuestItem {
+  margin-block: 0.5rem;
+}
+
+/*
+* Table Styling
+*/
+
+.Content .ContentColumn .ContentTable .Table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.Content .ContentColumn .ContentTable .Table thead th {
+  background-color: #f4f4f4;
+}
+
+.Content .ContentColumn .ContentTable .Table thead th,
+.Content .ContentColumn .ContentTable .Table tbody td {
+  border: 1px solid #cccccc;
+  padding: 15px;
+}
+
+.Content .ContentColumn .ContentTable .Table .LongCell {
+  min-width: 180px;
+}
+
+.Content .ContentColumn .ContentTable .Table .ShortCell {
+  min-width: 95px;
+}
+
+.Content .ContentColumn .InputCell {
+  text-align: center;
+}
+
+.Content .ContentColumn .PriceCell {
+  min-width: 75px !important;
+}
+
+.Content .ContentColumn .TextInputCell {
+  border: none;
+  max-width: 75px;
+  margin-left: 5px;
+}
+
+.TextInputCell input {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    display: block;
+    top: 0;
+    content: '$';
+    left: 5px;
+  }
+}
+
+.Content .ContentColumn .ContentTable .Table .TableRow:hover {
+  background-color: rgba(32, 101, 90, 0.2);
+  color: rgb(32, 101, 90);
+}
+
+/*
+* Checkbox Styling
+*/
+
+.Content .ContentColumn .CheckboxField {
+  accent-color: #20655a;
+}
+
+.Content .CheckboxLabel {
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+}
+
+@media screen and (max-width: 1024px) {
+  .ContentTable {
+    overflow-x: auto;
+    padding-inline: 20px;
+  }
+
+  .LongCell {
+    min-width: min-content !important;
+  }
+
+  .ShortCell {
+    min-width: min-content !important;
+  }
+
+  .AdditionalData::placeholder,
+  .AdditionalData,
+  th,
+  td {
+    font-size: medium;
+  }
+
+  .CurrencySign,
+  .Content .ContentColumn .TextInputCell {
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .AdditionalData::placeholder,
+  .AdditionalData,
+  th,
+  td {
+    font-size: small;
+  }
+
+  .CurrencySign,
+  .Content .ContentColumn .TextInputCell {
+    font-size: smaller;
+  }
+
+  .Content .ContentColumn .TextInputCell {
+    width: 50px !important;
+  }
+
+  td {
+    padding: 8px !important;
+  }
+
+  .Content form {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .AdditionalData::placeholder,
+  .AdditionalData,
+  th,
+  td,
+  .CurrencySign {
+    font-size: smaller;
+  }
+}

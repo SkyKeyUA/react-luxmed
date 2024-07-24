@@ -1,0 +1,23 @@
+.Button {
+  padding: 10px 24px;
+  height: 36px;
+  font-weight: 500;
+  margin-block: 5px;
+  font-family: Satoshi;
+  width: auto;
+  border: none;
+  cursor: pointer;
+  min-width: max-content;
+}
+
+.Button:hover {
+  background-color: #d2e0de !important;
+  color: #20655a !important;
+  transition: all 0.3s ease 0s;
+}
+
+.Button:disabled {
+  background-color: #79a39c !important;
+  color: #ffffff !important;
+  cursor: not-allowed !important;
+}

@@ -1,0 +1,58 @@
+@import './theme/theme.css';
+
+.App {
+  text-align: center;
+  font-family: Satoshi;
+  font-weight: 500;
+}
+
+.App .HomePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.ErrorMessage {
+  color: var(--error-color);
+}
+
+@font-face {
+  font-family: Satoshi;
+  src: url('./../public/font/Satoshi-Regular.woff2');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Satoshi;
+  src: url('./../public/font/Satoshi-Medium.woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Satoshi;
+  src: url('./../public/font/Satoshi-Bold.woff2');
+  font-weight: 700;
+}
+
+@media screen and (max-width: 800px) {
+  h1,
+  h2,
+  h3,
+  a,
+  input,
+  textarea {
+    font-size: medium;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  h1,
+  h2,
+  h3,
+  a,
+  input,
+  textarea {
+    font-size: small;
+  }
+}

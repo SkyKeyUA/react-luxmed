@@ -1,0 +1,22 @@
+:root {
+  --primary-color: #20655a;
+  --green-color: #79a39c;
+  --green-light-color: #d2e0de;
+
+  --pure-white-color: #ffffff;
+  --light-grey-color: #fafafa;
+  --light-grey-color-2: #f7f7f7;
+  --grey-color: #ededed;
+  --rich-grey-color: #666666;
+
+  --error-color: #d01010;
+
+  --main-desktop-padding: 18.5rem;
+  --main-tablet-padding: 9rem;
+  --main-mobile-padding: 4.5rem;
+  --main-mini-mobile-padding: 2rem;
+
+  --desktop-popup-padding: 30px 50px;
+  --tablet-popup-padding: 20px 30px;
+  --mobile-popup-padding: 10px 20px;
+}

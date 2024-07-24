@@ -1,0 +1,80 @@
+.Popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  margin: auto;
+  inset-area: center;
+  background-color: #ffffff;
+  padding: var(--desktop-popup-padding);
+  border-radius: 10px;
+  width: 400px;
+  top: -300px;
+  z-index: 15;
+}
+
+#overlay {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.ClosePopup {
+  z-index: 15;
+  top: 30px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  opacity: 0.4;
+  position: absolute;
+  cursor: pointer;
+  transition: opacity ease 0.5s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.ClosePopup::before,
+.ClosePopup::after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 10px;
+  width: 24px;
+  height: 3px;
+  background-color: var(--error-color);
+  /* background-color: var(--rich-grey-color); */
+}
+
+.ClosePopup::before {
+  transform: rotate(45deg);
+}
+
+.ClosePopup::after {
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 1500px) {
+  .Popup {
+    padding-inline: var(--desktop-popup-padding);
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Popup {
+    padding-inline: var(--tablet-popup-padding);
+    width: 320px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .Popup {
+    padding-inline: var(--mobile-popup-padding) !important;
+    width: 300px;
+  }
+}

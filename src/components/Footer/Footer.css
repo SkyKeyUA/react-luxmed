@@ -1,0 +1,113 @@
+.Footer {
+  width: 100%;
+}
+
+.Copyright {
+  display: flex;
+  justify-content: center;
+  height: 55px;
+  width: 100%;
+  background-color: #ededed;
+}
+
+.Contact {
+  margin-top: 15px;
+  padding-block: 40px;
+  align-items: center;
+  text-align: left;
+}
+
+.Contact .Claim {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.Contact .Claim img {
+  margin-block: 15px;
+}
+
+.Contact .Subscribe {
+  align-content: center;
+}
+
+.Contact .Subscribe h3 {
+  font-weight: 500;
+}
+
+.Contact .Subscribe .MailInput {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.Contact .Subscribe .MailInput input {
+  width: 335px;
+  height: 32px;
+  padding-inline: 15px;
+  font-weight: 500;
+  border: 1px solid var(--rich-grey-color);
+  background-color: #fafafa;
+}
+
+.Footer .Light {
+  background-color: #ffffff;
+}
+
+.Footer .Dark {
+  background-color: #f7f7f7;
+}
+
+@media screen and (min-width: 1500px) {
+  .Section {
+    padding-inline: var(--main-desktop-padding) !important;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .Section {
+    padding-inline: var(--main-tablet-padding) !important;
+  }
+  .Contact .Subscribe .MailInput input {
+    width: 235px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Section {
+    padding-inline: var(--main-mobile-padding) !important;
+  }
+
+  .Copyright p {
+    font-size: medium;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .Contact .Subscribe .MailInput input {
+    width: 125px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .Section {
+    padding-inline: var(--main-mini-mobile-padding) !important;
+  }
+  .Footer .Contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .Contact .Claim {
+    align-items: center;
+  }
+
+  .Copyright p {
+    font-size: small;
+  }
+}
