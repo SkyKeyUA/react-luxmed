@@ -14,8 +14,7 @@ function HomePage() {
           <br /> <span>Pain Management Practice</span> with the Power of AI.
         </h1>
         <p>
-          LUXMED – Where <span>Patients</span> From Around The World Find You,
-          and You Find Success!
+          LUXMED – Where <span>Patients</span> From Around The World Find You, and You Find Success!
         </p>
         <Button styling={'accent'}>Signup today for Free</Button>
       </div>
@@ -28,8 +27,7 @@ function HomePage() {
           playIcon={<img src="./img/play-icon.svg" alt="Play Icon"></img>}
           width={1100}
           height={605}
-          playing
-        ></ReactPlayer>
+          playing></ReactPlayer>
       </div>
       <div className="Promotion Section">
         <img className="Phone" src="./img/phone.svg" alt="Phone"></img>
@@ -39,15 +37,12 @@ function HomePage() {
             Discover <span>Valuable</span> Customers
           </h1>
           <p className="AccentColor">Brand Exposure</p>
-          <p>
-            Showcase your company brand, products & services to travelling
-            patients.
-          </p>
+          <p>Showcase your company brand, products & services to travelling patients.</p>
           <p className="AccentColor">Instant Gradification</p>
           <p>
-            LUXMED delivers on-demand results for patients seeking immediate
-            products and services. Let Lux Med show you how your practice can
-            tap into this demand for instant gradification.
+            LUXMED delivers on-demand results for patients seeking immediate products and services.
+            Let Lux Med show you how your practice can tap into this demand for instant
+            gradification.
           </p>
           <Button styling={'accent'} onClick={() => navigate('/questionnaire')}>
             Claim your free listing
@@ -59,8 +54,7 @@ function HomePage() {
           Get <span>Worldwide</span> Exposure
         </h1>
         <p>
-          LUXMED connects patients who are traveling to different countires with
-          skilled doctors.
+          LUXMED connects patients who are traveling to different countires with skilled doctors.
         </p>
         <img className="ReviewsMap" src="./img/reviews.svg" alt="Reviews"></img>
       </div>
@@ -72,20 +66,12 @@ function HomePage() {
           </h1>
           <ul className="ProsList">
             <li>LUXMED utilizes cutting-edge AI Technology</li>
-            <li>
-              Get worldwide exposure for products & services being offered by
-              your clinic
-            </li>
-            <li>
-              Deliver a premium expeirence for your existing and new patients
-            </li>
-            <li>
-              Innovative payment solutions, get paid before seeing your patient
-            </li>
+            <li>Get worldwide exposure for products & services being offered by your clinic</li>
+            <li>Deliver a premium expeirence for your existing and new patients</li>
+            <li>Innovative payment solutions, get paid before seeing your patient</li>
             <li>Empowering connections and expanding buisness opportuinites</li>
             <li>
-              Allow patients to acess products sitting in your inventory without
-              them expirying
+              Allow patients to acess products sitting in your inventory without them expirying
             </li>
             <li>90% of people conduct intial searches via mobile devices</li>
           </ul>
@@ -102,24 +88,9 @@ function HomePage() {
           <br /> app should have
         </h1>
         <form className="FeedbackForm" id="feedback-data" method="post">
-          <input
-            type="text"
-            id="name"
-            placeholder="Your Name"
-            autoComplete="on"
-          ></input>
-          <input
-            type="text"
-            id="mail"
-            placeholder="Your Email"
-            autoComplete="on"
-          ></input>
-          <textarea
-            id="message"
-            rows="5"
-            cols="45"
-            placeholder="Share your thoughts"
-          ></textarea>
+          <input type="text" id="name" placeholder="Your Name" autoComplete="on"></input>
+          <input type="text" id="mail" placeholder="Your Email" autoComplete="on"></input>
+          <textarea id="message" rows="5" cols="45" placeholder="Share your thoughts"></textarea>
           <Button name="submit" styling={'white'}>
             Send Feedback
           </Button>
