@@ -13,13 +13,11 @@ function MultipleDropdown() {
   const { list } = useSelector((store) => store.allLanguages);
   const { options } = useSelector((store) => store.selectedOptions);
   const [searchQuery, setSearchQuery] = useState('');
-  const [isFilled, setIsFilled] = useState(false);
   const [isNoResults, setIsNoResults] = useState(false);
 
   const handleClearButtonClick = () => {
     setSearchQuery('');
     setIsNoResults(false);
-    setIsFilled(false);
   };
 
   const handleRemoveTag = (currentTag) => {
@@ -50,20 +48,19 @@ function MultipleDropdown() {
     const showedArray = list.filter((item) => !hiddenSet.has(item));
 
     hiddenArray.map((hiddenItem) => {
-      document
+      return document
         .querySelector(
           `div.DropdownOptions div.Option[data-value="${hiddenItem.name}"]`
         )
         .classList.add('Hidden');
     });
     showedArray.map((hiddenItem) => {
-      document
+      return document
         .querySelector(
           `div.DropdownOptions div.Option[data-value="${hiddenItem.name}"]`
         )
         .classList.remove('Hidden');
     });
-    setIsFilled(true);
   }, [searchQuery]);
 
   return (
@@ -138,9 +135,6 @@ function MultipleDropdown() {
             <div className="Option NoResult">No result match</div>
           )}
         </div>
-        {!isFilled && (
-          <span className="TagError ErrorMessage">This field is required</span>
-        )}
       </div>
     </div>
   );

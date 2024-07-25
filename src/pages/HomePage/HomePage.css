@@ -57,7 +57,7 @@ textarea {
   align-items: flex-start;
   text-align: left;
   margin-inline: 5vw;
-  width: 25vw;
+  width: 450px;
 }
 
 .Promotion .Phone {
@@ -104,9 +104,16 @@ textarea {
 }
 
 .Pros .Description .ProsList {
-  font-weight: 300;
   margin: 0 0 20px 0;
   padding: 0 0 0 20px;
+}
+
+.Pros .Description .ProsList .ListItem {
+  margin-block: 10px;
+  line-height: 29px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #666666;
 }
 
 .HomePage .Feedback {
@@ -145,14 +152,14 @@ textarea {
 }
 
 .Feedback .FeedbackForm input {
-  height: 32px;
+  height: 50px;
   padding-inline: 15px;
   margin-bottom: 16px;
 }
 
 .Feedback .FeedbackForm #message {
   resize: none;
-  height: 132px;
+  height: 136px;
   margin-bottom: 16px;
   padding: 15px;
 }

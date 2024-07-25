@@ -65,21 +65,21 @@
 
 @media screen and (min-width: 1500px) {
   .Popup {
-    padding-inline: var(--desktop-popup-padding);
+    padding: var(--desktop-popup-padding);
     width: 350px;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .Popup {
-    padding-inline: var(--tablet-popup-padding);
+    padding: var(--tablet-popup-padding);
     width: 320px;
   }
 }
 
 @media screen and (max-width: 640px) {
   .Popup {
-    padding-inline: var(--mobile-popup-padding) !important;
+    padding: var(--mobile-popup-padding) !important;
     width: 300px;
   }
 }

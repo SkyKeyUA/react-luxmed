@@ -16,7 +16,7 @@
   --main-mobile-padding: 4.5rem;
   --main-mini-mobile-padding: 2rem;
 
-  --desktop-popup-padding: 30px 50px;
-  --tablet-popup-padding: 20px 30px;
-  --mobile-popup-padding: 10px 20px;
+  --desktop-popup-padding: 30px 50px 30px 50px;
+  --tablet-popup-padding: 20px 30px 20px 30px;
+  --mobile-popup-padding: 10px 20px 10px 20px;
 }

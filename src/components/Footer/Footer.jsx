@@ -46,7 +46,7 @@ function Footer() {
                 placeholder="Your email address"
                 {...register('email')}
               ></input>
-              <Button styling={'accent'}>Subscribe</Button>
+              <Button styling={'light'}>Subscribe</Button>
             </form>
           </div>
         </div>

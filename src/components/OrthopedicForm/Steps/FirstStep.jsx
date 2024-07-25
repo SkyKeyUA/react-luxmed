@@ -13,7 +13,6 @@ function OrtFirstStep({ register }) {
           name="firstName"
           id="firstName"
           placeholder=""
-          required
           {...register('firstName')}
         />
         <p className="Label" id="position">
@@ -25,7 +24,6 @@ function OrtFirstStep({ register }) {
           name="position"
           id="position"
           placeholder=""
-          required
           {...register('position')}
         />
         <p className="Label" id="locations">
@@ -50,7 +48,6 @@ function OrtFirstStep({ register }) {
           name="lastName"
           id="lastName"
           placeholder=""
-          required
           {...register('lastName')}
         />
         <p className="Label" id="practitioners">

@@ -185,12 +185,9 @@ function AesFourthStep({ register }) {
                       <span className="CurrencySign">$</span>
                       <input
                         type="number"
-                        min="0"
-                        pattern="[0-9]+([\.,][0-9]+)?"
                         className="TextInputCell"
                         defaultValue={item.price}
                         onChange={(e) => handlePriceChange(e.target.value)}
-                        required
                         {...register('ortPrice')}
                       ></input>
                     </td>
@@ -248,13 +245,9 @@ function AesFourthStep({ register }) {
                       <span className="CurrencySign">$</span>
                       <input
                         type="number"
-                        min="0"
-                        pattern="[0-9]+([\.,][0-9]+)?"
-                        step={0.01}
                         className="TextInputCell"
                         defaultValue={item.price}
                         onChange={(e) => handlePriceChange(e.target.value)}
-                        required
                         {...register('otherPrice')}
                       ></input>
                     </td>

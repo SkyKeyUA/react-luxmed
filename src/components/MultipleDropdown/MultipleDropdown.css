@@ -24,8 +24,8 @@
 }
 
 .Content .ContentColumn .SelectedBox {
-  height: fit-content;
-  min-height: 42px;
+  height: fit-content !important;
+  min-height: 50px !important;
 }
 .Tag {
   display: flex;

@@ -86,23 +86,29 @@ function AesthHomePage() {
             <br /> Ensuring Mutual Success
           </h1>
           <ul className="ProsList">
-            <li>LUXMED utilizes cutting-edge AI Technology</li>
-            <li>
+            <li className="ListItem">
+              LUXMED utilizes cutting-edge AI Technology
+            </li>
+            <li className="ListItem">
               Get worldwide exposure for products & services being offered by
               your clinic
             </li>
-            <li>
+            <li className="ListItem">
               Deliver a premium expeirence for your existing and new patients
             </li>
-            <li>
+            <li className="ListItem">
               Innovative payment solutions, get paid before seeing your patient
             </li>
-            <li>Empowering connections and expanding buisness opportuinites</li>
-            <li>
+            <li className="ListItem">
+              Empowering connections and expanding buisness opportuinites
+            </li>
+            <li className="ListItem">
               Allow patients to acess products sitting in your inventory without
               them expirying
             </li>
-            <li>90% of people conduct intial searches via mobile devices</li>
+            <li className="ListItem">
+              90% of people conduct intial searches via mobile devices
+            </li>
           </ul>
           <Button styling={'accent'} onClick={() => navigate('/questionnaire')}>
             Claim your free listing
