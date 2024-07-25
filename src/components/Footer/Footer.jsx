@@ -1,4 +1,5 @@
 import Button from '../../components/Button/Button';
+import { useForm } from 'react-hook-form';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './Footer.css';
 
@@ -7,6 +8,15 @@ function Footer() {
   const location = useLocation();
 
   const isHome = () => location.pathname === '/';
+  const { register, handleSubmit } = useForm({
+    defaultValues: {},
+  });
+
+  const submit = (data) => {
+    //You need do dispatch here
+    console.log('Those form data were submitted:');
+    console.log(data);
+  };
 
   return (
     <div className="Footer">
@@ -23,13 +33,21 @@ function Footer() {
         </div>
         <div className="Subscribe">
           <h3>Stay in Touch</h3>
-          <div className="MailInput">
-            <input
-              type="text"
-              id="mail"
-              placeholder="Your email address"
-            ></input>
-            <Button styling={'accent'}>Subscribe</Button>
+          <div>
+            <form
+              className="MailInput"
+              id="subscribe-data"
+              method="post"
+              onSubmit={handleSubmit(submit)}
+            >
+              <input
+                type="text"
+                id="email"
+                placeholder="Your email address"
+                {...register('email')}
+              ></input>
+              <Button styling={'accent'}>Subscribe</Button>
+            </form>
           </div>
         </div>
       </div>

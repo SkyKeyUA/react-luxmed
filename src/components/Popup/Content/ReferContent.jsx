@@ -1,3 +1,4 @@
+import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../Button/Button';
 import '../Popup.css';
@@ -6,7 +7,14 @@ import '../../OrthopedicForm/CSS/OrthopedicForm.css';
 function ReferContent({ togglePopup }) {
   const navigate = useNavigate();
 
-  const submitForm = () => {
+  const { register, handleSubmit } = useForm({
+    defaultValues: {},
+  });
+
+  const submit = (data) => {
+    //You need do dispatch here
+    console.log('Those form data were submitted:');
+    console.log(data);
     navigate('/');
   };
 
@@ -14,7 +22,12 @@ function ReferContent({ togglePopup }) {
     <div className="Popup">
       <div className="ClosePopup" onClick={() => togglePopup()}></div>
       <h1>Refer a Friend</h1>
-      <form className="Content" id="friend-data" method="post">
+      <form
+        className="PopupForm Content"
+        id="friend-data"
+        method="post"
+        onSubmit={handleSubmit(submit)}
+      >
         <div className="ContentColumn">
           <p className="Label" id="fullName">
             Full Name:
@@ -24,9 +37,8 @@ function ReferContent({ togglePopup }) {
             className="TextField"
             name="fullName"
             id="fullName"
-            value=""
-            onChange={(e) => console.log('Changed')}
             placeholder=""
+            {...register('fullName')}
           />
           <p className="Label" id="phoneNumber">
             Tel no.:
@@ -36,9 +48,8 @@ function ReferContent({ togglePopup }) {
             className="TextField"
             name="phoneNumber"
             id="phoneNumber"
-            value=""
-            onChange={(e) => console.log('Changed')}
             placeholder=""
+            {...register('phoneNumber')}
           />
           <p className="Label" id="emailAddress">
             Email Address:
@@ -48,20 +59,19 @@ function ReferContent({ togglePopup }) {
             className="TextField"
             name="emailAddress"
             id="emailAddress"
-            value=""
-            onChange={(e) => console.log('Changed')}
             placeholder=""
+            {...register('emailAddress')}
           />
         </div>
+        <div className="Buttons">
+          <Button id={'cancel'} styling={'basic'} onClick={() => togglePopup()}>
+            Cancel
+          </Button>
+          <Button id={'submit'} styling={'accent'}>
+            Submit
+          </Button>
+        </div>
       </form>
-      <div className="Buttons">
-        <Button id={'cancel'} styling={'basic'} onClick={() => togglePopup()}>
-          Cancel
-        </Button>
-        <Button id={'submit'} styling={'accent'} onClick={() => submitForm()}>
-          Submit
-        </Button>
-      </div>
     </div>
   );
 }

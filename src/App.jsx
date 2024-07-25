@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import HomePage from './pages/HomePage/HomePage';
+import OrthoHomePage from './pages/HomePage/OrthoHomePage';
+import AesthHomePage from './pages/HomePage/AesthHomePage';
 import QuestionnairePage from './pages/QuestionnairePage/QuestionnairePage';
 import CompletedPage from './pages/CompletedPage/CompletedPage';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
@@ -17,7 +18,8 @@ export default function App() {
         <div className="App">
           <Header></Header>
           <Routes>
-            <Route path="/" exact element={<HomePage />} />
+            <Route path="/" exact element={<OrthoHomePage />} />
+            <Route path="/aesthetic" exact element={<AesthHomePage />} />
             <Route
               path="/questionnaire"
               exact

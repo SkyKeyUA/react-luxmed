@@ -2,9 +2,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { getAllLanguages } from '../../../redux/Slices/getAllLanguagesSlice';
 import MultipleDropdown from '../../MultipleDropdown/MultipleDropdown';
-import '../CSS/OrthopedicForm.css';
+import '../CSS/AestheticForm.css';
 
-function OrtSecondStep({ register }) {
+function AesSecondStep({ register }) {
   const dispatch = useDispatch();
 
   const { error, isLoading } = useSelector((state) => state.allLanguages);
@@ -196,4 +196,4 @@ function OrtSecondStep({ register }) {
   );
 }
 
-export default OrtSecondStep;
+export default AesSecondStep;

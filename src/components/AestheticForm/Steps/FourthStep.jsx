@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import '../CSS/OrthopedicForm.css';
+import '../CSS/AestheticForm.css';
 
-const ortProductsData = [
+const aethProductsData = [
   {
     name: 'Gel One',
     manufacturer: 'Zimmer Biomet',
@@ -109,42 +109,42 @@ const ortProductsData = [
   },
 ];
 
-const otherMedProductsData = [
+const botoxTypeInjData = [
   {
-    name: 'XIAflex',
-    manufacturer: '-',
+    name: 'Botox',
+    manufacturer: 'Allergan',
     price: 25.99,
     available: false,
     instock: true,
   },
   {
-    name: 'Cortisol injections',
-    manufacturer: '-',
+    name: 'Dysport',
+    manufacturer: 'Galderma',
     price: 15.99,
     available: true,
     instock: false,
   },
   {
-    name: 'Botox injections',
-    manufacturer: '-',
+    name: 'Daxxify',
+    manufacturer: 'Revance Therapeutics',
     price: 35.99,
     available: true,
     instock: true,
   },
   {
-    name: 'PRP injections',
-    manufacturer: '-',
+    name: 'Xeomine',
+    manufacturer: 'Merz Therapeutics',
     price: 5.99,
     available: false,
     instock: false,
   },
 ];
 
-function OrtFourthStep({ register }) {
-  const [medicalBraces, setMedicalBraces] = useState(false);
+function AesFourthStep({ register }) {
+  const [skincareCream, seSkincareCream] = useState(false);
   const [otherProducts, setOtherProducts] = useState(false);
   const [checkedState, setCheckedState] = useState(
-    new Array(ortProductsData.length + otherMedProductsData.length).fill(false)
+    new Array(aethProductsData.length + botoxTypeInjData.length).fill(false)
   );
 
   const handleOnChange = (position) => {
@@ -163,7 +163,7 @@ function OrtFourthStep({ register }) {
   return (
     <div className="Content">
       <div className="ContentColumn">
-        <h2>Orthopedics</h2>
+        <h2>Aesthetics Medicine</h2>
         <div className="ContentTable">
           <table className="Table" id="orthopedicsProducts">
             <thead>
@@ -176,7 +176,7 @@ function OrtFourthStep({ register }) {
               </tr>
             </thead>
             <tbody>
-              {ortProductsData.map((item, index) => {
+              {aethProductsData.map((item, index) => {
                 return (
                   <tr key={index} className="TableRow">
                     <td className="LongCell">{item.name}</td>
@@ -226,9 +226,9 @@ function OrtFourthStep({ register }) {
             </tbody>
           </table>
         </div>
-        <h2>Other Injections/Medications</h2>
+        <h2>Botox Type Injections</h2>
         <div className="ContentTable">
-          <table className="Table" id="orthopedicsProducts">
+          <table className="Table" id="aestheticProducts">
             <thead>
               <tr>
                 <th className="LongCell">Product Name</th>
@@ -239,7 +239,7 @@ function OrtFourthStep({ register }) {
               </tr>
             </thead>
             <tbody>
-              {otherMedProductsData.map((item, index) => {
+              {botoxTypeInjData.map((item, index) => {
                 return (
                   <tr key={index} className="TableRow">
                     <td className="LongCell">{item.name}</td>
@@ -291,19 +291,20 @@ function OrtFourthStep({ register }) {
           </table>
         </div>
         <div className="QuestItem">
+          <h2>Skin care</h2>
           <p className="Question">
-            Q: Do your sell medical braces at your clinic?
+            Q: Do your sell medical skincare creams in your office?
           </p>
           <div className="RadioGroup">
             <label className="RadioLabel">
               <input
                 type="radio"
                 className="RadioField"
-                name="medicalBraces"
-                value={medicalBraces}
-                onChange={() => setMedicalBraces(true)}
+                name="skincareCream"
+                value={skincareCream}
+                onChange={() => seSkincareCream(true)}
                 placeholder=""
-                {...register('medicalBraces')}
+                {...register('skincareCream')}
               />
               Yes
             </label>
@@ -311,21 +312,21 @@ function OrtFourthStep({ register }) {
               <input
                 type="radio"
                 className="RadioField"
-                name="medicalBraces"
-                value={medicalBraces}
-                onChange={() => setMedicalBraces(false)}
+                name="skincareCream"
+                value={skincareCream}
+                onChange={() => seSkincareCream(false)}
                 placeholder=""
-                {...register('medicalBraces')}
+                {...register('skincareCream')}
               />
               No
             </label>
           </div>
-          {medicalBraces && (
+          {skincareCream && (
             <textarea
-              id="medicalBraces"
+              id="skincareCream"
               className="TextField AdditionalData"
               placeholder="Please add which brand"
-              {...register('medicalBracesBrand')}
+              {...register('skincareCreamBrand')}
             ></textarea>
           )}
         </div>
@@ -374,4 +375,4 @@ function OrtFourthStep({ register }) {
   );
 }
 
-export default OrtFourthStep;
+export default AesFourthStep;

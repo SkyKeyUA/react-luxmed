@@ -1,6 +1,6 @@
-import '../CSS/OrthopedicForm.css';
+import '../CSS/AestheticForm.css';
 
-function OrtThirdStep({ register }) {
+function AesThirdStep({ register }) {
   return (
     <div className="Content">
       <div className="ContentColumn">
@@ -163,4 +163,4 @@ function OrtThirdStep({ register }) {
   );
 }
 
-export default OrtThirdStep;
+export default AesThirdStep;
